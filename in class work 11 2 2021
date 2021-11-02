@@ -1,0 +1,58 @@
+print('This is a quiz game')
+answer = input('')
+i = 0
+
+
+print("Question 1.  What is the 5+5?")
+quiz_answer1 = input('')
+if quiz_answer1 == '10':
+    print("nice job that was correct you are smart!")
+    i +=1
+else:
+    print('you are kind of dumb and the correct answer is 10')
+
+print("Question 2.  What is Obama's last name?")
+quiz_answer2 = input('')
+if quiz_answer2.lower() == 'obama':
+    print("nice job that was correct you are smart!")
+
+    i += 1
+else:
+    print('you are kind of dumb and the correct answer is Obama')
+
+print("Question 3.  Who is the smartest and nicest and most charming student in class?")
+quiz_answer3 = input('A. Andy         B. Abhishek           C. Luke')
+if quiz_answer3.lower() == 'a':
+    print("nice job that was correct you are smart!")
+    i += 1
+else:
+    print('you are kind of dumb and the correct answer is a')
+
+print("Question 4.  How many people are in your class")
+quiz_answer4 = input('A. 12         B. 11           C. 13')
+if quiz_answer4.lower() == 'b':
+    print("nice job that was correct you are smart!")
+    i += 1
+else:
+    print('you are kind of dumb and the correct answer is b')
+
+print("Question 5. What time does school end on a Friday.")
+quiz_answer5 = input('')
+if quiz_answer3 == '2:30':
+    print("nice job that was correct you are smart!")
+    i += 1
+else:
+    print('you are kind of dumb and the correct answer is 2:30.')
+print("You have ", i, " quesitons correct!")
+if i == 0:
+    print("That is 0%.")
+elif i == 1:
+    print("That is 20%.")
+elif i == 2:
+    print("That is 40%.")
+elif i == 3:
+    print("That is 60%.")
+elif i == 4:
+    print("That is 80%.")
+elif i == 5:
+    print("That is 100%.")
