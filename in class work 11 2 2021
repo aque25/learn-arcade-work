@@ -16,7 +16,7 @@ quiz_answer2 = input('')
 if quiz_answer2.lower() == 'obama':
     print("nice job that was correct you are smart!")
 
-    i += 1
+    i += 1 
 else:
     print('you are kind of dumb and the correct answer is Obama')
 
@@ -28,31 +28,21 @@ if quiz_answer3.lower() == 'a':
 else:
     print('you are kind of dumb and the correct answer is a')
 
-print("Question 4.  How many people are in your class")
-quiz_answer4 = input('A. 12         B. 11           C. 13')
-if quiz_answer4.lower() == 'b':
-    print("nice job that was correct you are smart!")
+print("Question 4.  This question will always be correct.  How old are you?")
+quiz_answer4 = int(input(''))
+if quiz_answer4 > 900:
+    print('you are old')
     i += 1
 else:
-    print('you are kind of dumb and the correct answer is b')
+    print('you are young')
+    i += 1
 
 print("Question 5. What time does school end on a Friday.")
 quiz_answer5 = input('')
-if quiz_answer3 == '2:30':
+if quiz_answer3 == '2:30' or '14:30':
     print("nice job that was correct you are smart!")
     i += 1
 else:
     print('you are kind of dumb and the correct answer is 2:30.')
-print("You have ", i, " quesitons correct!")
-if i == 0:
-    print("That is 0%.")
-elif i == 1:
-    print("That is 20%.")
-elif i == 2:
-    print("That is 40%.")
-elif i == 3:
-    print("That is 60%.")
-elif i == 4:
-    print("That is 80%.")
-elif i == 5:
-    print("That is 100%.")
+print("You have ", i, " questions correct!")
+print("You got", i * 20, "%.  Nice job.")
