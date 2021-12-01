@@ -1,0 +1,59 @@
+# q3-q7
+i = 0
+e = 0
+while i < 10:
+    print(' ')
+    i += 1
+    e = 0
+    while e < 10:
+        e += 1
+        print(end=' *')
+
+y = 0
+x = 0
+while x < 10:
+    print(' ')
+    x += 1
+    y = 0
+    while y < 5:
+        print(end=' *')
+        y += 1
+print()
+
+
+o = 0
+p = 0
+while o < 5:
+    print(' ')
+    o += 1
+    p = 0
+    while p < 20:
+        print(end=' *')
+        p += 1
+print()
+
+
+q = 0
+w = 0
+while q < 10:
+    print(' ')
+    q += 1
+    w = 0
+    while w < 10:
+        number = str(w)
+        print(' ', end= number)
+        w += 1
+
+
+print()
+
+row = -1
+column = 0
+while row < 9:
+    print(' ')
+    row += 1
+    column = 0
+    while column < 10:
+        number1 = str(row)
+        print(' ', end= number1)
+        column += 1
