@@ -1,0 +1,57 @@
+for i in range(10):
+    print('*', end= ' ')
+print()
+
+print()
+
+for i in range(10):
+    print('*', end= ' ')
+print()
+
+for i in range(5):
+    print('*', end= ' ')
+print()
+for i in range(20):
+    print('*', end= ' ')
+print()
+
+
+
+
+
+for row in range(10):
+    print(' ')
+    for column in range(10):
+        print(end=' *')
+print()
+
+
+for row in range(10):
+    print(' ')
+    for column in range(5):
+        print(end=' *')
+print()
+
+
+for row in range(5):
+    print(' ')
+    for column in range(20):
+        print(end=' *')
+print()
+
+
+for row in range(10):
+    print(' ')
+    for column in range(10):
+        number = str(column)
+        print(' ', end= number)
+        column += 1
+
+print()
+
+for row in range(-1, 9):
+    print(' ')
+    row += 1
+    for column in range(10):
+        number1 = str(row)
+        print(' ', end= number1)
