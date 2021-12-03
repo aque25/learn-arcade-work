@@ -1,0 +1,75 @@
+import random
+canteen = 'You drank from your canteen.'
+moderate = 'You decided to go at moderate speed.'
+full = 'You decided to go at full speed.'
+stop = 'You have stopped and rested.'
+check = 'You checked your status.'
+quit = 'You have quit.'
+print('''
+Welcome to Camel!
+You have stolen a camel to make your way across the great Mobi desert.
+The natives want their camel back and are chasing you down! Survive your
+desert trek and outrun the natives.  The natives move at a constant speed of
+3 miles per move.
+Every time you move you get more thirsty and you camel gets more tired.
+When you camel reaches tired level 5 he will die.
+When you reach thirst level 4 you will die.
+You have a total of 3 water, which will completely quench your thirst.
+Finally, every time you move at moderate speed, you horse get 1x more tired and you get 1x more thirsty, 
+and if you move at full speed, your horse gets 2x more tired and you get 1x more thirsty.
+''')
+milesforyou = 0
+thirst = 0
+camelFatigue = 0
+milesforthenatives = -20
+amountofwater = 3
+i = 0
+distance = milesforyou - milesforthenatives
+
+while i < 1 and thirst < 4 and distance > 0 and milesforyou < 29 and camelFatigue < 5:
+    print('''A. Drink from your canteen.
+    B. Ahead moderate speed.
+    C. Ahead full speed.
+    D. Stop and rest.
+    E. Status check.
+    Q. Quit.''')
+
+    firstchoice = input('What do you want to do?       ')
+    firstchoice = firstchoice.lower()
+    print('You chose ' + firstchoice)
+    if firstchoice == 'a':
+        print(canteen)
+        amountofwater -= 1
+        print('you have ' + str(amountofwater) + ' water left.')
+        thirst = 0
+    elif firstchoice == 'b':
+        print(moderate)
+        milesforyou += random.randint(1,6)
+        print('you have moved a total of ' + str(milesforyou) + ' miles.')
+        camelFatigue += 1
+        thirst += 1
+    elif firstchoice == 'c':
+        print(full)
+        milesforyou += random.randint(6, 12)
+        print('you have moved a total of ' + str(milesforyou) + ' miles.')
+        thirst += 1
+        camelFatigue += 2
+    elif firstchoice == 'd':
+        print(stop)
+        print('Your camel is now not tired anymore.')
+        camelFatigue = 0
+    elif firstchoice == 'e':
+        print(check)
+        print('The distance between you and the natives are ' + str(distance) + ' miles.')
+    else:
+        i += 2
+if i > 1:
+    print('imagine quitting you are stupid.')
+elif thirst == 4:
+    print('You are literally braindead you died because you didnt drink enough water.  Hydrate yourself!')
+elif distance == 0 or distance < 0:
+    print('You were too slow, the natives caught up to you.')
+elif milesforyou > 29:
+    print('CONGRATS!!! YOU HAVE ESCAPED!!!')
+elif camelFatigue > 4:
+    print('You forgot about your camel... Animal cruelty department will be visiting you soon.')
