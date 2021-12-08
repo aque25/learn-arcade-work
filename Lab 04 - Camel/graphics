@@ -1,0 +1,106 @@
+import arcade.csscolor
+import random
+arcade.open_window(600,600, "Drawing Example")
+arcade.set_background_color(arcade.csscolor.SKY_BLUE)
+arcade.start_render()
+
+def background():
+    arcade.draw_lrtb_rectangle_filled(0, 600, 100, 0, arcade.color.SAND)
+    x = 0
+    i = 0
+    g = 0
+    y = 10
+    while x < 600:
+        arcade.draw_lrtb_rectangle_filled(x, x + 35, 25, 0, arcade.color.GRAY)
+        arcade.draw_triangle_filled(x - 5, 10, x + 15, 20, x - 5, 40, arcade.color.GRAY)
+        arcade.draw_circle_filled(x + 35, 5, 12, arcade.color.GRAY)
+        arcade.draw_lrtb_rectangle_filled(x - 10, x + 10, 15, 0, arcade.color.GRAY)
+        arcade.draw_lrtb_rectangle_filled(x, x + 20, 25, 15, arcade.color.GRAY)
+        arcade.draw_lrtb_rectangle_filled(x, x + 15, 30, 20, arcade.color.GRAY)
+
+        x += random.randint(70, 200)
+
+        for i in range (10):
+            g += random.randint(50, 100)
+            arcade.draw_ellipse_filled(g, 10, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 10, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 20, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 30, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 40, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 50, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 55, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 60, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 70, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 80, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 90, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 100, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 110, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 120, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 130, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 140, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 150, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 160, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 170, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 180, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 190, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 200, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 210, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 220, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 230, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 240, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g + 10, y + 250, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 260, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 270, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 280, 10, 20, arcade.color.DARK_GREEN)
+            arcade.draw_ellipse_filled(g, y + 290, 10, 20, arcade.color.DARK_GREEN)
+
+
+def turtles(x, y):
+    arcade.draw_ellipse_filled(x, y, 30, 20, arcade.color.ARMY_GREEN)
+    arcade.draw_ellipse_filled(x - 15, y - 25, 10, 20, arcade.color.ARMY_GREEN)
+    arcade.draw_ellipse_filled(x - 35, y - 25, 10, 20, arcade.color.ARMY_GREEN)
+    arcade.draw_triangle_filled(x - 60, y - 15, x - 40, y - 10, x - 40, y - 20, arcade.color.ARMY_GREEN)
+    arcade.draw_ellipse_filled(x - 25, y - 15, 50, 30, arcade.color.DARK_BROWN)
+    arcade.draw_line(x - 43, y - 4, x - 30, y - 10, arcade.color.BLACK)
+    arcade.draw_line(x - 10, y - 4, x - 20, y - 10, arcade.color.BLACK)
+    arcade.draw_line(x - 30, y - 10, x - 20, y - 10, arcade.color.BLACK)
+    arcade.draw_line(x - 43, y - 24, x - 30, y - 17, arcade.color.BLACK)
+    arcade.draw_line(x - 10, y - 24, x - 20, y - 17, arcade.color.BLACK)
+    arcade.draw_line(x - 30, y - 17, x - 20, y - 17, arcade.color.BLACK)
+    arcade.draw_line(x - 30, y - 10, x - 30, y - 17, arcade.color.BLACK)
+    arcade.draw_line(x - 20, y - 10, x - 20, y - 17, arcade.color.BLACK)
+    arcade.draw_line(x - 43, y - 4, x - 43, y - 24, arcade.color.BLACK)
+    arcade.draw_line(x - 10, y - 4, x - 10, y - 24, arcade.color.BLACK)
+    arcade.draw_line(x - 43, y - 4, x - 10, y - 4, arcade.color.BLACK)
+    arcade.draw_line(x - 43, y - 24, x - 10, y - 24, arcade.color.BLACK)
+    arcade.draw_circle_filled(x + 5, y + 5, 5, arcade.color.BLACK)
+
+
+def person():
+    arcade.draw_circle_filled(535, 395, 10, arcade.color.PEACH)
+    arcade.draw_lrtb_rectangle_filled(525, 540, 385, 345, arcade.color.YELLOW)
+    arcade.draw_lrtb_rectangle_filled(535, 550, 375, 370, arcade.color.YELLOW)
+    arcade.draw_lrtb_rectangle_filled(540, 550, 350, 345, arcade.color.PURPLE)
+    arcade.draw_lrtb_rectangle_filled(545, 550, 345, 330, arcade.color.PURPLE)
+    arcade.draw_ellipse_filled(548, 328, 10, 4, arcade.color.BLACK)
+    arcade.draw_circle_filled(540, 400, 2, arcade.color.BLACK)
+
+
+
+
+
+
+
+
+
+def main():
+    background()
+    turtles(550, 350)
+    turtles(150, 360)
+    turtles(130, 100)
+    turtles(50, 200)
+    turtles(200, 200)
+    person()
+main()
+arcade.finish_render()
+arcade.run()
